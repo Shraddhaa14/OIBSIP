@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+body, html {
+    background: #000;
+    margin: 0;
+    height: 100vh;
+    color: #fff;
+    font-family: "Comfortaa", cursive;
+  }
+
+.featured{
+    text-align: center;
+    text-decoration: none;
+}
+      
+  .spike {
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    background: #fff9;
+    line-height: 20px;
+    transform-origin: 50%;
+    z-index: 5;
+    inset: 0;
+    margin: auto;
+    font-style: normal;
+    transform: rotate(var(--rotate)) translateX(var(--dail-size));
+  }
+  .spike:nth-child(5n+1) {
+    box-shadow: -7px 0 #fff9;
+  }
+  .spike:nth-child(5n+1):after {
+    content: attr(data-i);
+    position: absolute;
+    right: 22px;
+    top: -10px;
+    transition: 1s linear;
+    transform: rotate(calc( var(--dRotate) - var(--rotate)));
+  }
+  
+  .seconds {
+    --dRotate: 0deg;
+    --dail-size: calc((var(--clock-size)/ 2) - 8px);
+    font-weight: 800;
+    font-size: 18px;
+    transform: rotate(calc( -1 * var(--dRotate)));
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transition: 1s linear;
+  }
+  
+  .minutes {
+    --dail-size: calc((var(--clock-size)/ 2) - 65px);
+    font-size: 16px;
+    transform: rotate(calc( -1 * var(--dRotate)));
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transition: 1s linear;
+  }
+  
+  .stop-anim {
+    transition: 0s linear;
+  }
+  .stop-anim .spike:after {
+    transition: 0s linear !important;
+  }
+  
+  .hour {
+    font-size: 70px;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #6495ED;
+  }
+  
+  .minute {
+    font-size: 36px;
+    font-weight: 900;
+    position: absolute;
+    background: #000;
+    z-index: 10;
+    right: calc(var(--clock-size)/ 4.5);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6495ED;
+  }
+  .minute:after {
+    content: "";
+    position: absolute;
+    border: 2px solid #fff;
+    border-right: none;
+    height: 50px;
+    left: -10px;
+    top: 50%;
+    border-radius: 40px 0 0 40px;
+    width: calc(var(--clock-size)/ 2.75);
+    transform: translatey(-50%);
+  }
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.watch{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.it{
+    color: #6495ED;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0px 10px;
+    transform: .2s;
+}
+
+.navbar a:hover,.navbar a.active{
+    color: #6495ED;
+}
+
+.insta:hover{
+    color: rgb(227, 113, 241);
+    border: 2px solid rgb(227, 113, 241);
+
+}
+
+.twitter:hover{
+    color: rgba(0, 0, 253, 0.753);
+    border: 2px solid rgba(0, 0, 253, 0.753);
+}
+
+.socials{
+    width: 100px;
+    height: 40px;
+ 
+    
+
+}
+.socials a{
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0px 10px;
+    transform: .2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    transition: .2s;
+    
+}
+
+
+.socials a i{
+    transform: rotate(-45deg);
+    font-size: 24px;
+
+}
+
+.home-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 8% 0;
+}
+
+.content{ 
+    display: block;
+    max-width: 630px;
+    
+}
+
+.home-page h1{
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.home-page p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    border: 2px solid #4e4187;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color:  #4e4187;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #f8ffe5;
+    transition: .8s;
+}
+
+.btn:hover{
+    background-color:#6495ED ;
+    color: #f8ffe5;
+    border: 2px solid #6495ED;
+
+} 
+
+.imgg{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    padding-top: 50px;
+}
+
+
+
+.clock {
+    --clock-size: 360px;
+    width: var(--clock-size);
+    height: var(--clock-size);
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.spike {
+    position: absolute;
+    width: 8px;
+}
+
+.page_2 .top{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+img{
+    display: inline-block;
+    padding: 50px;
+    height: 640px;
+    width: 500px;
+    
+}
+
+.one{
+    height: 100%;
+    width: 100%;
+   padding-top: 200px;
+   z-index: -1;
+}
+ .footer{
+    background-color: #24262b;
+    padding: 70px;
+ }
+
+ .container{
+    max-width: 1170px;
+    margin: auto;
+ }
+
+ ul{
+    list-style: none;
+ }
+
+ .row{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+ }
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #6495ED;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform:  capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffff;
+    padding-left: 10px;
+
+}
+
+.wrapper{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start;
+}
+
+.copyright{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.its{
+    color: #6495ED;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
