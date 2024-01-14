@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Peronal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe3bcb8f3c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+    <nav>
+        <img src="logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick ="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick ="opemenu()"></i>
+    </nav>
+    <div class="header-text">
+    <p>WEB DEVELOPER</p>
+    <h1>Hi, I'm <br><span>SHRADDHA DESAI</span> </h1>
+    </div>
+</div> 
+
+</div>
+<!--------------about----------->
+<div id="about">
+    <div class="container">
+    <div class="row">
+     <div class="about-col-1">
+        <img src="about img.jpeg">
+     </div>
+     <div class="about-col-2">
+        <h1 class="sub-title">about me </h1>
+        <p>Hello, I'm Shraddha Desai, a Third year undergraduate with a focus on web development.
+            I'm pursuing my degree in Artificial Intelligence and Data Science at S.I.E.S Graduate School of Technology.
+            I am enthusiastic about delving into the world of web development and 
+            have honed my skills in Python, MATLAB, HTML, and CSS. Eager to kickstart my career, 
+            I'm excited about the prospect of contributing to innovative projects in the field of web development.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>html css js</span><br>WEB development </li>
+                    <li><span>SQL</span><br>DATABASE MANAGEMENT SYSTEM </li>
+                    <li><span>Matlab</span><br>PYTHON</li>
+                    <li><span>Foundations data analytics</span><br>DATA ANALYTICS</li>
+                </ul>
+            </div>
+            <div class="tab-contents"id="Experience">
+                <ul>
+                    <li><span>2023</span><br>WEB development intern at CODSOFT PVT LTD </li>
+                    
+                </ul>
+            </div>
+            <div class="tab-contents"id="Education">
+                <ul>
+                    
+                    <li><span>2022</span><br>BE AI & DS FROM MUMBAI UNIVERSITY</li>
+                    <li><span>2021</span><br>HSC FROM ST MARY'S JUNIOR COLLEGE</li>
+                </ul>
+            </div>
+     </div>     
+    </div>
+    </div>
+</div>
+<!-------------projects--->
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects </h1>
+        <div class="Projects-list">
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Object detection using python</h2>
+                <img src="project1.jpeg">
+                <p>
+                    In this Python project, I'm utilizing advanced computer vision techniques to create an efficient object detection system.
+                     Using libraries like OpenCV and TensorFlow, the goal is to train models that can accurately identify and locate objects 
+                     in images or videos. The project demonstrates my expertise in Python programming, machine learning, and computer vision, 
+                     with potential applications in surveillance, autonomous vehicles, and image analysis.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>blood bank management system </h2>
+                <img src="project2.jpg">
+                <p>The Blood Bank Management System is designed to optimize blood bank operations, offering a user-friendly interface for managing donors,
+                     blood inventory, and distribution. It facilitates efficient tracking of blood types, donor details, and supply chain, with features 
+                     for scheduling appointments and notifications. The system aims to improve coordination among donors, recipients, and staff, ensuring 
+                     timely access to blood products and overall operational effectiveness.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>sentiment analysis</h2>
+                <img src="project3.jpeg">
+                <p>The Sentiment Analysis project utilizes natural language processing to categorize text as positive, negative, or neutral. By employing
+                     machine learning, the goal is to gain insights from textual data, helping businesses make informed decisions based on public opinions,
+                      customer feedback, or social media discussions.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!---------------------CONTACT----------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>dshraddha001@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9082732395</p>
+                <div class="social-icons">
+                   <a href="https://www.linkedin.com/in/shraddha-desai-8636b5253"><i class="fa-brands fa-linkedin"></i></a>
+                   <a href="https://www.instagram.com/_shrxddhx_14/?theme=dark%27"><i class="fa-brands fa-instagram"></i></a>
+                   <a href=https://web.telegram.org/a/#777000><i class="fa-brands fa-telegram"></i></a>  
+                </div>
+                <a href="Resume.pdf"Download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @shraddha .made with<i class="fa-solid fa-heart"></i> by Shraddha Desai</p>
+    </div>
+</div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+     for(tablink of tablinks){
+        tablink.classList.remove("active-link"); 
+     }
+     for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+     }
+     event.currentTarget.classList.add("active-link");
+     document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzUflomGooc66vhZKBXdbgxnuQpcce489rhQK-sn2WpufOx3-1StsjsO__GGsElYMfp/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+              msg.innerHTML = ""  
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
